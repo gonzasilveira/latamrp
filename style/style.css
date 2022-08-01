@@ -161,7 +161,8 @@ body {
 /* Footer Contenido */
 
 footer {
-    background-color: rgba(4, 68, 88, 0.356);
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 7%, rgba(0,0,255,1) 50%, rgba(0,212,255,1) 100%);
     padding: 1rem;
     border: 1px solid white;
     display: flex;
