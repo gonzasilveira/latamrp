@@ -1,0 +1,258 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../img/fondo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Contenido */
+
+.header {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "logo nav"
+    "titulo titulo" ;
+
+    margin: 1rem;
+}
+
+.tituloContainer {
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.logoContainer {
+    grid-area: logo;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navContainer {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;   
+}
+
+.logoContainer img {
+    width: 90%;
+    height:  auto;
+}
+
+.tituloContainer  h1 {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navContainer ul {
+    list-style: none;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 5%;
+}
+
+.navContainer li {
+    margin: .4rem;
+}
+
+.navContainer a {
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+}
+
+.navContainer a:hover {
+    color: brown;
+}
+
+/* Main Contenido */
+
+.galeriaContainer {
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: center;
+}
+
+.textoContainer{
+    display: flex;
+    flex-flow: column nowrap; 
+    width: 80%;
+    margin: 2rem auto;
+    background-color: rgba(4, 68, 88, 0.8);
+    padding: 1rem;
+    border: 1px solid white;
+}
+
+.normativa h4, .rango h4 {
+    color: white;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.normativa p {
+    color: white;
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.galeriaContainer h2, .textoContainer h2 {
+    color: red;
+    align-self: center;
+}
+
+.textoContainer li {
+    margin: 1rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.textoContainer a {
+    color: lightblue;
+}
+
+.textoContainer a:hover {
+    color: brown;
+}
+
+.imgContainer{
+    width: 80%;
+    margin: 1rem;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.iframeContainer {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    padding-top:45%;
+    margin: 3rem auto;
+}
+
+.iframeContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Footer Contenido */
+
+footer {
+    background-color: rgba(4, 68, 88, 0.356);
+    padding: 1rem;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.footerNavContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.enlace {
+    width: 15%;
+}
+
+.enlace img {
+    width: 100%;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 480px) {
+
+    .footerNavContainer {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .header {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        ". logo nav"
+        "titulo titulo titulo" ;
+    }
+
+    .footerNavContainer, .imgContainer, .iframeContainer, .textoContainer {
+        width: 60%;
+    }
+
+    .iframeContainer {
+        padding-top: 30%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .footerNavContainer, .imgContainer, .iframeContainer, .textoContainer {
+        width: 40%;
+    }
+    
+    .iframeContainer {
+        padding-top: 20%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .footerNavContainer {
+        width: 20%;
+    }
+}
+
+
+/* .tabla{
+    background-color: rgba(4, 68, 88, 0.356);
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+div table tr{
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
+} */
+
+/* .rangos{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
